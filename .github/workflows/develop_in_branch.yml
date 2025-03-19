@@ -24,11 +24,12 @@ jobs:
           echo "::warning::This is a warning message."
           echo "::error::This is an error message."          
       - uses: actions/checkout@v4.1.0
-      - uses: devops-actions/actionlint@v0.1.2
       - run: |
           echo "::notice file=.github/workflows/develop_in_branch.yml, line=22::There is a debug message that is not always visible."
           echo "::warning file=.github/workflows/develop_in_branch.yml, line=22, endiline=25::A lot of messagess."
           echo "::error title=Script Injection, file=.github/workflows/develop_in_branch.yml, line=19::Potential script injection."
+      - uses: devops-actions/actionlint@v0.1.2
+      
       
           
       
